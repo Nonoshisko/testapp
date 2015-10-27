@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Mainroads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kdo</th>
+      <th>Kam</th>
+      <th>Co</th>
+      <th>Cena</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mainroads.each do |mainroad| %>
+      <tr>
+        <td><%= mainroad.Kdo %></td>
+        <td><%= mainroad.Kam %></td>
+        <td><%= mainroad.Co %></td>
+        <td><%= mainroad.Cena %></td>
+        <td><%= link_to 'Show', mainroad %></td>
+        <td><%= link_to 'Edit', edit_mainroad_path(mainroad) %></td>
+        <td><%= link_to 'Destroy', mainroad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mainroad', new_mainroad_path %>

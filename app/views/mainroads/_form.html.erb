@@ -1,0 +1,33 @@
+<%= form_for(@mainroad) do |f| %>
+  <% if @mainroad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mainroad.errors.count, "error") %> prohibited this mainroad from being saved:</h2>
+
+      <ul>
+      <% @mainroad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Kdo %><br>
+    <%= f.text_field :Kdo %>
+  </div>
+  <div class="field">
+    <%= f.label :Kam %><br>
+    <%= f.text_field :Kam %>
+  </div>
+  <div class="field">
+    <%= f.label :Co %><br>
+    <%= f.text_field :Co %>
+  </div>
+  <div class="field">
+    <%= f.label :Cena %><br>
+    <%= f.text_field :Cena %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
